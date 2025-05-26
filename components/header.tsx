@@ -47,8 +47,14 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-10 border-b bg-background">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto">
-        <div className="font-semibold text-primary">Veggie Tracker</div>
-
+        <div >
+          <a
+            href="https://inventory-managment-amber.vercel.app/"
+            className="hover:opacity-80 transition-opacity font-semibold p-5 text-primary"
+          >
+            Veggie Tracker
+          </a>
+        </div>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
           {routes.map((route) => (
