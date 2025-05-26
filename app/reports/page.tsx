@@ -69,6 +69,7 @@ export default function ReportsPage() {
 
     try {
       const success = await generatePDF(reportData, startDate, endDate)
+
       if (success) {
         toast.success("Report exported successfully")
       } else {

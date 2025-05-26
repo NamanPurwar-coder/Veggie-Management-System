@@ -1,7 +1,7 @@
 import { ReportData } from "@/types";
 import { format } from "date-fns";
 import jsPDF from "jspdf";
-import "jspdf-autotable";
+import autoTable from "jspdf-autotable"; 
 
 export async function generatePDF(
   reportData: ReportData,
@@ -41,7 +41,7 @@ export async function generatePDF(
     doc.text("Inventory Items", pageWidth / 2, y, { align: "center" });
     y += 10;
 
-    doc.autoTable({
+    autoTable(doc,{
       startY: y,
       head: [["Name", "Category", "Quantity", "Price", "Value"]],
       body: reportData.items.map((item) => [
