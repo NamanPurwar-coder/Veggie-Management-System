@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useTheme } from "next-themes"
 import { toast } from "react-toastify"
 import { Moon, Sun, Monitor } from "lucide-react"
+import Footers from "@/components/ui/footers"
 
 export default function SettingsPage() {
   const { theme, setTheme } = useTheme()
@@ -124,6 +125,7 @@ export default function SettingsPage() {
           </CardFooter>
         </Card>
       </div>
+      <Footers />
     </main>
   )
 }

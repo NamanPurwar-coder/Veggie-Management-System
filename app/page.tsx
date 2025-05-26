@@ -7,6 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BarChart3, Package, ShoppingCart } from "lucide-react"
 import InventorySummary from "@/components/inventory-summary"
 import { Skeleton } from "@/components/ui/skeleton"
+import { Footer } from "react-day-picker"
+import Footers from "@/components/ui/footers"
 
 export default function Home() {
   const [stats, setStats] = useState(null)
@@ -98,6 +100,7 @@ export default function Home() {
           <Link href="/inventory">View All Inventory</Link>
         </Button>
       </div>
+      <Footers />
     </main>
   )
 }

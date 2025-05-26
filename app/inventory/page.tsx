@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ArrowLeft, Plus } from "lucide-react"
 import InventoryList from "@/components/inventory-list"
+import Footers from "@/components/ui/footers"
 
 export default function InventoryPage() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -73,6 +74,7 @@ export default function InventoryPage() {
           <InventoryList searchTerm={searchTerm} category={category} sortBy={sortBy} />
         </CardContent>
       </Card>
+      <Footers />
     </main>
   )
 }

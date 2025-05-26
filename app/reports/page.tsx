@@ -13,6 +13,7 @@ import { toast } from "react-toastify"
 import { ReportData } from "@/types"
 import { generatePDF } from "@/lib/pdf-utils"
 import { format } from "date-fns"
+import Footers from "@/components/ui/footers"
 
 export default function ReportsPage() {
   const [startDate, setStartDate] = useState("")
@@ -319,6 +320,7 @@ export default function ReportsPage() {
           </Tabs>
         </div>
       )}
+      <Footers />
     </main>
   )
 }
